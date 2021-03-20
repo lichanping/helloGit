@@ -30,3 +30,11 @@ git add .
 git commit -m "new code on dev branch"
 git push "origin" dev 
 ```
+7. git log: Show commit log
+8. git merge: Branch merging
+```bash
+echo During development phase, my local branch dev is out-of-date, so need to merge latest code from main branch.
+git checkout main
+
+git merge dev
+```
