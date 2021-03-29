@@ -18,7 +18,10 @@ echo create a file in working directory
 echo print('hello world')>hello.py
 git add hello.py
 ```
-git **restore** --staged <file>: unstage the file if added unintentionally.
+git **restore** --staged <file>: to unstage the file if added unintentionally.
+```bash
+git restore --staged my_code.py
+```
 5. git **commit**: Record changes to the repository. The files become unmodified after commit.
 ```bash
 git commit -m "add py file"
