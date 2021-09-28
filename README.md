@@ -60,3 +60,10 @@ The difference between git revert and git reset<br>
 *git revert rolls back the previous commit with a new commit, while git reset directly deletes the specified commit.
 In the case of git reset, the effect is similar. However, there is a difference when you continue to merge older versions later. Because git revert "neutralizes" the previous commit with a reverse commit, when the old branch is merged later, the changes will not reappear. branch is merged again, these rolled back commits should be brought back in.
 git reset moves the HEAD back a bit, while git revert moves the HEAD forward, except that the content of the new commit is the opposite of the content to be reverted, offsetting the content to be reverted.*
+
+11. How to quickly shift to another work branch
+```bash
+git branch -m <newBranchName>
+git pull origin <mainBranchName>
+```
+This will automatically pull all the latest code to main branch and merge into the renamed work branch.
