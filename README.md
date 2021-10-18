@@ -67,3 +67,9 @@ git branch -m <newBranchName>
 git pull origin <mainBranchName>
 ```
 This will automatically pull all the latest code to main branch and merge into the renamed work branch.
+
+12. Create a new branch based on main branch and Switch to it
+```bash
+switch to main branch and pull latest
+git branch -b <newBranchName> 
+```
