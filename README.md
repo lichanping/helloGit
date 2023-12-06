@@ -80,8 +80,14 @@ ssh-add ~/.ssh/id_rsa_personal # 将 SSH 密钥添加到 SSH 代理
 cat ~/.ssh/id_rsa_personal.pub | pbcopy # 复制公钥文件内容，用于添加到github中的ssh key
 ```
 在 ~/.ssh/config 文件中添加配置，指定每个主机对应的密钥
+```bash
 # Personal account
 Host github.com-personal
 HostName github.com
 User git
 IdentityFile ~/.ssh/id_rsa_personal
+```
+clone repo
+```bash
+git clone git@github.com-personal:<username>/<repoHost>.git
+```
