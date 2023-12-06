@@ -73,3 +73,15 @@ This will automatically pull all the latest code to main branch and merge into t
 switch to main branch and pull latest
 git branch -b <newBranchName> 
 ```
+13. 如果你有两个 GitHub 账号，而且你希望为每个账号使用不同的 SSH 密钥，你可以按照以下步骤进行设置
+```bash
+ssh-keygen -t rsa -C "your_email@example.com" -f ~/.ssh/id_rsa_personal # 生成两个 SSH 密钥对
+ssh-add ~/.ssh/id_rsa_personal # 将 SSH 密钥添加到 SSH 代理
+cat ~/.ssh/id_rsa_personal.pub | pbcopy # 复制公钥文件内容，用于添加到github中的ssh key
+```
+在 ~/.ssh/config 文件中添加配置，指定每个主机对应的密钥
+# Personal account
+Host github.com-personal
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_personal
